@@ -1,5 +1,5 @@
 // 离线缓存：联网时取最新并存一份，断网时用存下的
-const CACHE = 'rank-demo-99ac90e197';
+const CACHE = 'rank-demo-5180eb1dc6';
 const FILES = ["./", "index.html", "manifest.webmanifest", "icon-180.png", "icon-512.png"];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
